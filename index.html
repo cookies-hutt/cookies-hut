@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookies Hut</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="eventModalLabel">Events</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselEvents" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <!-- <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://dummyimage.com/1000x1000/09f/fff.jpg" class="d-block w-100" alt="Event">
+              </div>
+              <!-- <div class="carousel-item">
+                <img src="https://dummyimage.com/1000x1000/09f/fff.jpg" class="d-block w-100" alt="Event">
+              </div>
+              <div class="carousel-item">
+                <img src="https://dummyimage.com/1000x1000/09f/fff.jpg" class="d-block w-100" alt="Event">
+              </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-md bg-body-tertiary" style="position: relative;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;" class="d-none d-md-block">
+      <a class="navbar-brand me-auto" href="./index.html">
+        <img src="./images/branding-logo.jpeg" alt="Logo" width="65" height="60">
+      </a>
+    </div>
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="./index.html">
+        <img src="./images/branding-name.jpeg" id="navBrandingName" alt="Branding">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <img src="./images/branding-logo.jpeg" alt="Logo" width="65" height="60">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item px-md-3">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/menu/menu.html">Menus</a>
+            </li>
+            <hr class="text-white"/>
+            <li class="d-md-none">
+              <a href="https://www.facebook.com/profile.php?id=100064434919713" target="_blank" class="text-white"><i class="fa-brands fa-facebook" style="font-size: 2rem;"></i></a>
+              <a href="https://www.instagram.com/cookies.hut/" target="_blank" class="text-white"><i class="fa-brands fa-instagram ps-3" style="font-size: 2rem;"></i></a>
+            </li>
+            <li class="d-md-none mt-4">
+              <div class="container-fluid text-white">
+                <div class="row">
+                  <div class="col-1 p-0">
+                    <i class="fa-sharp fa-solid fa-location-dot px-1"></i>
+                  </div>
+                  <div class="col p-0">
+                    GP01A, Ground Floor, Sungei Wang Plaza, Jln Sultan Ismail, 50250 Kuala Lumpur.
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-1 p-0">
+                    <i class="fa-solid fa-clock px-1"></i> 
+                  </div>
+                  <div class="col p-0">
+                    10am - 10pm
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselHomeImages" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselHomeImages" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselHomeImages" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://dummyimage.com/1600x900/09f/fff.jpg" class="d-block w-100" alt="Menu Hightlight">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/1600x900/09f/fff.jpg" class="d-block w-100" alt="Menu Hightlight">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHomeImages" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHomeImages" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <article class="py-2 text-center custom-background-primary-color text-white">
+    <div class="py-3">
+      <img src="https://dummyimage.com/360x120/09f/fff.jpg" alt="Home Title" class="sub-title-image">
+    </div>
+
+    <div style="width: 100%; max-width: 900px; margin: auto;" class="py-3 px-5">
+      <p class="mb-3"> 鄉味創辦人，何先生在80年代跟著伯公（也稱：鴨仔）親自在怡保九洞學習手工餅，並在當地深受大眾喜愛。</p>
+      <p class="mb-3"> 直到1998年，何先生在吉隆坡甲洞創辦了《鄉味餅家》且運營了傳統檔舖超過20年。</p>
+      <p class="mb-3"> 後來，何先生的兒子覺得傳統的手藝越來越少，他下定決心把父親的手藝傳承下去，讓更多老百姓享用到父親的傳統手藝。他在2020年將鄉味轉型成實體與網店同時並肩經營的品牌。</p>
+      <p class="mb-3">如今，鄉味以最傳統的味道和最方便的模式站在這裏，目的就只是為了帶給您這一口冰涼濃滑的咖啡，和這一塊唇齒留香的加央角。</p>
+      <p class="mb-3"><a href="./pages/menu/menu.html" class="text-white" style="font-size: 1.2rem;">&gt; &gt; 來吧，今天就讓鄉味喚醒您味蕾的慾望! &lt; &lt;</a></p>
+    </div>
+  </article>
+
+  <footer class="py-4 text-white">
+    <div>
+      <h4>Contact us</h4>
+      <div class="py-1">
+        <i class="fa-sharp fa-solid fa-location-dot px-1"></i>
+        <span>GP01A, Ground Floor, Sungei Wang Plaza, Jln Sultan Ismail, 50250 Kuala Lumpur.</span>
+      </div>
+      <div class="py-1">
+        <i class="fa-solid fa-clock px-1"></i> 
+        <span>10am - 10pm</span>
+      </div>
+      <div class="py-2">
+        <a href="https://www.facebook.com/profile.php?id=100064434919713" target="_blank" class="text-white"><i class="fa-brands fa-facebook px-2" style="font-size: 2rem;"></i></a>
+        <a href="https://www.instagram.com/cookies.hut/" target="_blank" class="text-white"><i class="fa-brands fa-instagram px-2" style="font-size: 2rem;"></i></a>
+      </div>
+      <div class="py-1" style="font-size: 0.8rem;"><span id="currentYear">2023</span> © COOKIES HUT SDN BHD. ALL RIGHTS RESERVED</div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/437f15982d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="./scripts.js"></script>
+  <script>
+    // show the modal after page is loaded
+    const eventModal = new bootstrap.Modal('#eventModal', {})
+    eventModal.show();
+  </script>
+</body>
+</html>

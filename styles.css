@@ -1,0 +1,90 @@
+/* Root Variable */
+:root {
+  --custom-primary-color: #991C1F;
+  --custom-secondary-color: #F5921D;
+  --custom-primary-rgb-color: 153, 28, 31;
+  --custom-secondary-rgb-color: 245, 146, 29;
+}
+
+/* Custom Color */
+.custom-background-primary-color {
+  background-color: var(--custom-primary-color) !important;
+}
+
+.custom-font-primary-color {
+  color: var(--custom-primary-color) !important;
+}
+
+.custom-background-secondary-color {
+  background-color: var(--custom-secondary-color) !important;
+}
+
+.custom-font-secondary-color {
+  color: var(--custom-secondary-color) !important;
+}
+
+/*Footer*/
+footer {
+  background-color: #541E1C;
+}
+
+footer > div {
+  width: 100%; 
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--custom-primary-color) !important;
+}
+
+.navbar .offcanvas {
+  background-color: var(--custom-primary-color) !important;
+}
+
+.navbar .navbar-toggler {
+  border-color: rgb(var(--custom-secondary-rgb-color)) !important;
+}
+
+.navbar .navbar-toggler i {
+  color: var(--custom-secondary-color) !important;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-size: 1.5em !important;
+  transition: filter 0.3s;
+}
+
+.navbar .active {
+  font-weight: bold !important;
+  color: var(--custom-secondary-color) !important;
+}
+
+.navbar .nav-link:hover {
+  filter: brightness(80%);
+}
+
+#navBrandingName {
+  width: 150px;
+  height: 90px;
+}
+
+.sub-title-image {
+  width: 360px;
+  height: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  #navBrandingName {
+    width: 75px;
+    height: 45px;
+  }
+
+  .sub-title-image {
+    width: 180px;
+    height: 60px;
+  }
+}
